@@ -28,9 +28,7 @@ diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], [
 ```
 ## cách 3
 ```javascript
-function diffArray(...arr) {
-  return [...arr[0].filter(e=>arr[1].indexOf(e)===-1),...arr[1].filter(e=>arr[0].indexOf(e)===-1)];
-}
+const diffArray=(...arr)=> [...arr[0].filter(e=>arr[1].indexOf(e)===-1),...arr[1].filter(e=>arr[0].indexOf(e)===-1)];
 diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
 ```
 # Sum All Numbers in a Range 
