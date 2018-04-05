@@ -9,6 +9,11 @@ function whatIsInAName(collection, source) {
   return arr;
 }
 ```
+` cach 2 `
+```javascript
+const whatIsInAName=(collection, source)=> return collection.filter(e => (Object.keys(source)).every(k=> e[k]===source[k]) )
+
+```
 # Roman Numeral Converter
 * link: https://www.freecodecamp.org/challenges/roman-numeral-converter
 ```javascript
