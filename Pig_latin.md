@@ -19,3 +19,21 @@ function translatePigLatin(str) {
 translatePigLatin("consonant");
 
 ```
+`cach 2`
+```javascript
+function translatePigLatin(str) {
+    const arr = str.split('');
+    const {length} = arr;
+    const k = str.search(/[aeiou]/);
+    if (k===0) return str+"way";
+    arr.splice(0, k);
+    return ([...arr,str.substr(0,k),'ay'].join(""));
+}
+```
+`cach 3`
+```javascript
+function translatePigLatin(str) {
+    if (str.search(/[aeiou]/)===0) return str+"way";
+    return str.replace(/([^ueoai]+)([ueoai].*)/i, `$2$1ay`);
+}
+```
